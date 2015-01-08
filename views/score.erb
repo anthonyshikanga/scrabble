@@ -1,5 +1,20 @@
 <div>
-  <h1>Congrats <%= @name %></h1>
-  <p>Your word "<%= @word %>" got a score of <%= @score %>
-    
+  <h1>Congrats <%= @name %>!</h1>
+  <p>Your word "<%= @word %>" got a score of <%= @score %>.</p>
+
+  <form action="/practice">
+    <input class="btn" type="submit" value="Practice again?">
+  </form>
+
+  </br>
+
+  <form action="/two_player">
+    <input class="btn" type="submit" value="Did you find a friend?">
+  </form>
+
+  </br>
+
+  <form action="http://google.com">
+    <input class="btn" type="submit" value="Give up?">
+  </form>
 </div>

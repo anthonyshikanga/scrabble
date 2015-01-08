@@ -1,0 +1,37 @@
+<div>
+  <h1><%= @winner %> won!</h1>
+
+  <table class="table">
+    <tr>
+      <td>Player Name</td>
+      <td>Word</td>
+      <td>Score</td>
+    </tr>
+    <tr>
+      <td><%= @name1 %></td>
+      <td><%= @word1 %></td>
+      <td><%= @score1 %></td>
+    </tr>
+    <tr>
+      <td><%= @name2 %></td>
+      <td><%= @word2 %></td>
+      <td><%= @score2 %></td>
+    </tr>
+  </table>
+
+  <form action="/practice">
+    <input class="btn" type="submit" value="<%= @loser %>! Practice! ">
+  </form>
+
+  </br>
+
+  <form action="/two_player">
+    <input class="btn" type="submit" value="Rematch?">
+  </form>
+
+  </br>
+
+  <form action="http://google.com">
+    <input class="btn" type="submit" value="Give up?">
+  </form>
+</div>
