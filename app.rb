@@ -14,11 +14,12 @@ get('/practice') do #This is the form with 2 inputs
   erb(:practice)
 end
 
-get('score') do # Results page for practice
+get('/score') do # Results page for practice
     #"Hey (name) why don't you have friends?"
     # if have time, add Time comments (ie "why are you awake?")
     @score = params.fetch('word').scrabble()
     @name = params.fetch('name')
+    @word = params.fetch('word')
   erb(:score)
 end
 
