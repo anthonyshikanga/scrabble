@@ -1,0 +1,17 @@
+
+.main_title {
+  font-size: 5em;
+  background-color: yellow;
+}
+
+a {color:black;}
+a:hover {color:black;}
+
+.player1 {
+  color: red;
+
+}
+
+.player2 {
+  color: blue;
+}
