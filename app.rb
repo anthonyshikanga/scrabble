@@ -17,7 +17,13 @@ end
 get('/score') do # Results page for practice
     #"Hey (name) why don't you have friends?"
     # if have time, add Time comments (ie "why are you awake?")
-    @score = params.fetch('word').scrabble()
+    # if (params.fetch('word').class()).!==(String)
+    #   @word = "Numbers don't count! Cheater!"
+    #   @score = 0
+    # else
+      @score = params.fetch('word').scrabble()
+    # end
+
     if params.fetch('name').==("")
       @name="Anonymous Hippo"
     else
@@ -70,14 +76,14 @@ get('/two_player_winner') do # Results page for 4 input form
 
   #figures out who won
   if @score1.>(@score2)
-    @winner = params.fetch('player1')
-    @loser = params.fetch('player2')
+    @winner = @name1
+    @loser = @name2
   elsif @score1.==(@score2)
     @winner = "your mom"
     @loser = "Both of you"
   else
-    @winner = params.fetch('player2')
-    @loser = params.fetch('player1')
+    @winner = @name2
+    @loser = @name1
   end
   erb(:two_player_winner)
 end
